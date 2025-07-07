@@ -1,1122 +1,1622 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReserveIQ - Save Time Daily + Prevent $50K+ Crisis Assessments | Property Manager AI Platform</title>
-    <meta name="description" content="Dual-power AI platform: Generate professional communications instantly + predict reserve fund crises years early. Transform your property management business.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ReserveIQ - Save Time Daily + Prevent $50K+ Crisis Assessments | Property
+      Manager AI Platform
+    </title>
+    <meta
+      name="description"
+      content="Dual-power AI platform: Generate professional emails in 30 seconds + predict reserve fund crises 2-3 years early. Transform your property management business."
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #ffffff;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .logo-icon::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm5-18v4h3V3h-3z"/></svg>') center/20px no-repeat;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        .cta-button {
-            background: white;
-            color: #1e3a8a;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #ffffff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .header.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .header.scrolled .logo {
+        font-size: 1.5rem;
+      }
+
+      .header.scrolled .logo-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .logo-icon::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm5-18v4h3V3h-3z"/></svg>')
+          center/20px no-repeat;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.8;
+      }
+
+      .cta-button {
+        background: #3b82f6;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        background: #2563eb;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #3b82f6 50%,
+          #10b981 100%
+        );
+        color: white;
+        padding: 120px 0 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        opacity: 0.95;
+        font-weight: 500;
+      }
+
+      .hero-description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        display: block;
+        color: #fbbf24;
+      }
+
+      .stat-label {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background: #3b82f6;
+        color: white;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+        background: #2563eb;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: #1e3a8a;
+      }
+
+      /* Section Styling */
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.3rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Two Pillars Section */
+      .two-pillars {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-top: 3rem;
+      }
+
+      .pillar-card {
+        border-radius: 16px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .pillar-daily {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border: 2px solid #3b82f6;
+      }
+
+      .pillar-crisis {
+        background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+        border: 2px solid #10b981;
+      }
+
+      .pillar-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .pillar-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+
+      .pillar-value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .pillar-daily .pillar-value {
+        color: #3b82f6;
+      }
+
+      .pillar-crisis .pillar-value {
+        color: #059669;
+      }
+
+      .pillar-description {
+        color: #64748b;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .pillar-stats {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .stat-item {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .pillar-daily .stat-item {
+        color: #3b82f6;
+      }
+
+      .pillar-crisis .stat-item {
+        color: #059669;
+      }
+
+      .stat-item-label {
+        font-size: 0.9rem;
+        color: #64748b;
+      }
+
+      .pillar-button {
+        display: inline-block;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .pillar-daily .pillar-button {
+        background: #3b82f6;
+      }
+
+      .pillar-crisis .pillar-button {
+        background: #10b981;
+      }
+
+      .combination-note {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 12px;
+      }
+
+      .combination-note h4 {
+        color: #1e3a8a;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .combination-note p {
+        color: #64748b;
+        font-size: 1.1rem;
+      }
+
+      /* How It Works Section */
+      .how-it-works {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      }
+
+      .steps-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .step-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 2px solid #e0f2fe;
+        position: relative;
+      }
+
+      .step-number {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .step-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .step-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+
+      .step-description {
+        color: #64748b;
+        line-height: 1.6;
+      }
+      .comparison-section {
+        padding: 80px 0;
+        background: #f8fafc;
+      }
+
+      .comparison-disclaimer {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: #e0f2fe;
+        border-radius: 8px;
+        border-left: 4px solid #0284c7;
+      }
+
+      .comparison-disclaimer p {
+        color: #0c4a6e;
+        font-style: italic;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .comparison-table-container {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border: 2px solid #e2e8f0;
+        overflow-x: auto;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      .comparison-table thead tr {
+        background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+        color: white;
+      }
+
+      .comparison-table th {
+        padding: 1.5rem 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table th:first-child {
+        border-radius: 8px 0 0 0;
+      }
+
+      .comparison-table th:last-child {
+        border-radius: 0 8px 0 0;
+      }
+
+      .comparison-table th:nth-child(2) {
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .comparison-table th:not(:first-child):not(:nth-child(2)) {
+        text-align: center;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .comparison-table td:first-child {
+        font-weight: 600;
+        color: #1e3a8a;
+      }
+
+      .comparison-table td:not(:first-child) {
+        text-align: center;
+      }
+
+      .comparison-table tr:nth-child(even) {
+        background: #f8fafc;
+      }
+
+      .feature-check {
+        color: #059669;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .feature-cross {
+        color: #ef4444;
+        font-size: 1.5rem;
+      }
+
+      .feature-partial {
+        color: #f59e0b;
+        font-size: 1.5rem;
+      }
+
+      .feature-description {
+        font-size: 0.8rem;
+        color: #64748b;
+        display: block;
+        margin-top: 2px;
+      }
+
+      .reserveiq-highlight {
+        background: #f0fdf4 !important;
+      }
+
+      .comparison-conclusion {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-radius: 12px;
+        border: 2px solid #10b981;
+      }
+
+      .comparison-conclusion h3 {
+        color: #059669;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .comparison-conclusion p {
+        color: #166534;
+        font-size: 1.1rem;
+      }
+
+      /* Simple sections for features */
+      .simple-section {
+        padding: 80px 0;
+      }
+
+      .simple-section.white {
+        background: white;
+      }
+
+      .simple-section.gray {
+        background: #f8fafc;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+
+      .feature-description {
+        color: #64748b;
+      }
+
+      /* Partner Program */
+      .partner-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+        color: white;
+      }
+
+      .partner-content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .partner-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .partner-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 3rem;
+      }
+
+      .faq-item {
+        margin-bottom: 2rem;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: #1e3a8a;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .faq-answer {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      .footer {
+        background: #1f2937;
+        color: white;
+        padding: 60px 0 30px 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #10b981;
+      }
+
+      .footer-section p,
+      .footer-section a {
+        color: #d1d5db;
+        text-decoration: none;
+        line-height: 1.6;
+      }
+
+      .footer-section a:hover {
+        color: #10b981;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #374151;
+        padding-top: 2rem;
+        text-align: center;
+        color: #9ca3af;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
         }
 
-        /* FIX FOR WHITE BOX IN HEADER - MAKE BUTTON BLUE */
-        .cta-button,
-        a.cta-button,
-        .header .cta-button {
-            background: #3b82f6 !important;
-            color: white !important;
-            border: 2px solid #3b82f6 !important;
-            padding: 12px 20px !important;
-            border-radius: 6px !important;
-            font-weight: 600 !important;
-            text-decoration: none !important;
-            cursor: pointer !important;
-            font-size: 1rem !important;
-            transition: all 0.3s ease !important;
-            display: inline-block !important;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #10b981 100%);
-            color: white;
-            padding: 120px 0 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-        
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-            font-weight: 500;
+          font-size: 1.2rem;
         }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
+
         .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
+          gap: 1.5rem;
         }
-        
-        .stat {
-            text-align: center;
+
+        .pillars-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            display: block;
-            color: #fbbf24;
+
+        .faq-grid {
+          grid-template-columns: 1fr;
         }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
+
+        .nav-links {
+          display: none;
         }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+
+        .logo {
+          font-size: 1.4rem;
         }
-        
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+
+        .logo-icon {
+          width: 32px;
+          height: 32px;
         }
-        
-        .btn-primary {
-            background: white;
-            color: #1e3a8a;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+        .comparison-table-container {
+          padding: 1rem;
         }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+
+        .comparison-table {
+          font-size: 0.8rem;
         }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.75rem 0.5rem;
         }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #1e3a8a;
+
+        .steps-container {
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
-        
-        /* Dual Power Section */
-        .dual-power {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
+
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
+          font-size: 2rem;
         }
-        
+
         .section-subtitle {
-            font-size: 1.3rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
+          font-size: 1.1rem;
         }
-        
-        .power-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-        
-        .power-card {
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            border-radius: 16px;
-            padding: 3rem;
-            text-align: center;
-            border: 2px solid #3b82f6;
-        }
-        
-        .power-card.prevention {
-            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
-            border-color: #10b981;
-        }
-        
-        .power-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .power-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
-        }
-        
-        .power-subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #3b82f6;
-            margin-bottom: 1rem;
-        }
-        
-        .power-card.prevention .power-subtitle {
-            color: #059669;
-        }
-        
-        .power-description {
-            color: #64748b;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        
-        .power-stats {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            text-align: center;
-        }
-        
-        .stat-item {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #3b82f6;
-        }
-        
-        .power-card.prevention .stat-item {
-            color: #059669;
-        }
-        
-        .stat-item-label {
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-        
-        .power-cta {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .power-card.prevention .power-cta {
-            background: #10b981;
-        }
-        
-        /* Communication Tools Section */
-        .communication-tools {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .tool-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .tool-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .tool-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tool-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
-        }
-        
-        .tool-description {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .tool-features {
-            list-style: none;
-        }
-        
-        .tool-features li {
-            color: #059669;
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .tool-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* Value Proposition Section */
-        .value-prop {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .value-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .value-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1.5rem;
-        }
-        
-        .value-content p {
-            font-size: 1.2rem;
-            color: #64748b;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        
-        .value-comparison {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 2rem;
-            border-left: 4px solid #10b981;
-        }
-        
-        .comparison-section {
-            margin-bottom: 1.5rem;
-        }
-        
-        .comparison-section h4 {
-            color: #1e3a8a;
-            margin-bottom: 0.5rem;
-        }
-        
-        .comparison-section ul {
-            list-style: none;
-            margin: 0;
-        }
-        
-        .comparison-section li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .comparison-section.before li::before {
-            content: '❌';
-            position: absolute;
-            left: 0;
-        }
-        
-        .comparison-section.after li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-        }
-        
-        .comparison-section.before li {
-            color: #ef4444;
-        }
-        
-        .comparison-section.after li {
-            color: #059669;
-        }
-        
-        /* Crisis Prevention Section */
-        .crisis-prevention {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
-        }
-        
-        .crisis-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .crisis-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #92400e;
-            margin-bottom: 1.5rem;
-        }
-        
-        .crisis-content p {
-            font-size: 1.2rem;
-            color: #b45309;
-            margin-bottom: 2rem;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .feature-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-description {
-            color: #64748b;
-        }
-        
-        /* Partner Program Section */
-        .partner-program {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
-            color: white;
-        }
-        
-        .partner-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .partner-program h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .partner-program p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .partner-tiers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .tier-card {
-            background: white;
-            color: #1e3a8a;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .tier-card:hover {
-            transform: translateY(-4px);
-        }
-        
-        .tier-card.featured {
-            border: 3px solid #fbbf24;
-            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.3);
-        }
-        
-        .tier-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tier-card h3 {
-            color: #1e3a8a;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-        
-        .tier-card p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        .revenue-highlight {
-            background: white;
-            color: #1e3a8a;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 500px;
-        }
-        
-        .revenue-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .revenue-example {
-            font-family: 'Courier New', monospace;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-        
-        .revenue-total {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #059669;
-            text-align: center;
-            padding: 1rem;
-            background: #f0fdf4;
-            border-radius: 8px;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #1f2937;
-            color: white;
-            padding: 60px 0 30px 0;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #10b981;
-        }
-        
-        .footer-section p,
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            line-height: 1.6;
-        }
-        
-        .footer-section a:hover {
-            color: #10b981;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
-            text-align: center;
-            color: #9ca3af;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .hero-stats {
-                gap: 1.5rem;
-            }
-            
-            .value-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .power-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav container">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <div>
-                    <div style="font-size: 1.8rem; font-weight: 700;">ReserveIQ</div>
-                    <div style="font-size: 0.8rem; opacity: 0.9; font-weight: 400;">AI-Powered Portfolio Intelligence Platform</div>
-                </div>
+      <nav class="nav container">
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <div>
+            <div style="font-size: 1.8rem; font-weight: 700">ReserveIQ</div>
+            <div style="font-size: 0.8rem; opacity: 0.9; font-weight: 400">
+              AI-Powered Portfolio Intelligence Platform
             </div>
-            <ul class="nav-links">
-                <li><a href="#communication-tools">Communication Tools</a></li>
-                <li><a href="#crisis-prevention">Crisis Prevention</a></li>
-                <li><a href="#partner-program">Partner Program</a></li>
-                <li><a href="mailto:demo@reserveiq.dev" class="cta-button">Get Demo</a></li>
-            </ul>
-        </nav>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#two-pillars">Dual Power</a></li>
+          <li><a href="#comparison">vs Competitors</a></li>
+          <li><a href="#partner-program">Partner Program</a></li>
+          <li><a href="#" class="cta-button">Try Demo</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Property Management Business</h1>
-                <p class="hero-subtitle">Save time daily + Prevent $50K+ crisis assessments</p>
-                <p class="hero-description">The only platform that handles your daily communication stress AND predicts financial disasters years before they hit.</p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">5-10</span>
-                        <span class="stat-label">Hours Saved Weekly</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">$50K+</span>
-                        <span class="stat-label">Crisis Prevention</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">2-3</span>
-                        <span class="stat-label">Years Early Warning</span>
-                    </div>
-                </div>
-                
-                <div class="hero-buttons">
-                    <a href="mailto:demo@reserveiq.dev" class="btn btn-primary">🎯 Book Your ROI Demo</a>
-                    <a href="#communication-tools" class="btn btn-secondary">📊 See Platform Overview</a>
-                </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Transform Your Property Management Business</h1>
+          <p class="hero-subtitle">
+            Save time daily + Prevent $50K+ crisis assessments
+          </p>
+          <p class="hero-description">
+            The only platform that handles your daily communication stress AND
+            predicts financial disasters years before they hit.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">5-10</span>
+              <span class="stat-label">Hours Saved Weekly</span>
             </div>
+            <div class="stat">
+              <span class="stat-number">$50K+</span>
+              <span class="stat-label">Crisis Prevention</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2-3</span>
+              <span class="stat-label">Years Early Warning</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">🎯 Book Your ROI Demo</a>
+            <a href="#comparison" class="btn btn-secondary"
+              >📊 Compare vs Traditional Platforms</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Dual Power Strategy -->
-    <section class="dual-power">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Two Ways We Transform Your Property Management Business</h2>
-                <p class="section-subtitle">Handle daily stress + Prevent financial disasters. No other platform does both.</p>
+    <!-- Social Proof Section -->
+    <section
+      style="
+        padding: 40px 0;
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+      "
+    >
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto">
+          <p style="color: #64748b; font-size: 1rem; margin-bottom: 0.5rem">
+            Developed in collaboration with experienced property managers and
+            condo board advisors
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 2rem;
+              flex-wrap: wrap;
+              margin-top: 1rem;
+            "
+          >
+            <div style="color: #10b981; font-weight: 600; font-size: 0.9rem">
+              🏢 Multi-Building Portfolio Tested
             </div>
-            
-            <div class="power-grid">
-                <!-- Daily Operations Pillar -->
-                <div class="power-card">
-                    <div class="power-icon">📧</div>
-                    <h3 class="power-title">Daily Operations</h3>
-                    <p class="power-subtitle">Save 5-10 Hours Every Week</p>
-                    <p class="power-description">AI-powered communication tools that make you look like a professional genius. Generate board-ready content in seconds.</p>
-                    
-                    <div class="power-stats">
-                        <div class="stats-grid">
-                            <div>
-                                <div class="stat-item">Professional</div>
-                                <div class="stat-item-label">Template Library</div>
-                            </div>
-                            <div>
-                                <div class="stat-item">30 Sec</div>
-                                <div class="stat-item-label">Generation Time</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#communication-tools" class="power-cta">See Communication Tools</a>
-                </div>
-                
-                <!-- Crisis Prevention Pillar -->
-                <div class="power-card prevention">
-                    <div class="power-icon">🎯</div>
-                    <h3 class="power-title">Crisis Prevention</h3>
-                    <p class="power-subtitle">Prevent $50,000+ Emergency Assessments</p>
-                    <p class="power-description">AI predicts reserve fund crises 2-3 years before they devastate owners. No other platform offers this protection.</p>
-                    
-                    <div class="power-stats">
-                        <div class="stats-grid">
-                            <div>
-                                <div class="stat-item">2-3</div>
-                                <div class="stat-item-label">Years Early Warning</div>
-                            </div>
-                            <div>
-                                <div class="stat-item">92%</div>
-                                <div class="stat-item-label">Prediction Accuracy</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#crisis-prevention" class="power-cta">See Crisis Prevention</a>
-                </div>
+            <div style="color: #10b981; font-weight: 600; font-size: 0.9rem">
+              📋 Board-Approved Templates
             </div>
-            
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
-                <h4 style="color: #1e3a8a; font-size: 1.3rem; margin-bottom: 1rem;">Why This Combination Is Unbeatable</h4>
-                <p style="color: #64748b; font-size: 1.1rem;">Communication tools get you immediate results. Crisis prevention creates unbreakable client loyalty. Together, they make you irreplaceable.</p>
+            <div style="color: #10b981; font-weight: 600; font-size: 0.9rem">
+              ⚖️ Legal Compliance Verified
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Communication Tools Showcase -->
-    <section id="communication-tools" class="communication-tools">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Communication Tools: Never Stress About Board Communications Again</h2>
-                <p class="section-subtitle">AI-powered template library that makes you look like a communication expert. Generate professional content in seconds.</p>
-            </div>
-            
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-icon">📊</div>
-                    <h3 class="tool-title">Board Financial Updates</h3>
-                    <p class="tool-description">Auto-filled with reserve data, variance analysis, and AI recommendations. Impress your board with data-driven insights.</p>
-                    <ul class="tool-features">
-                        <li>Live financial data integration</li>
-                        <li>Professional charts and graphs</li>
-                        <li>Variance analysis included</li>
-                        <li>Action recommendations</li>
-                    </ul>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">⚠️</div>
-                    <h3 class="tool-title">Compliance Communications</h3>
-                    <p class="tool-description">Jurisdiction-specific warnings with penalty calculations. Never miss another deadline again.</p>
-                    <ul class="tool-features">
-                        <li>Multi-jurisdiction compliance</li>
-                        <li>Penalty cost calculations</li>
-                        <li>Automated scheduling</li>
-                        <li>Legal requirement details</li>
-                    </ul>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">💰</div>
-                    <h3 class="tool-title">Assessment Announcements</h3>
-                    <p class="tool-description">Professional multi-option funding analysis that owners actually understand. Reduce board meeting drama.</p>
-                    <ul class="tool-features">
-                        <li>Multiple funding scenarios</li>
-                        <li>Owner-friendly explanations</li>
-                        <li>Cost comparison charts</li>
-                        <li>Timeline breakdowns</li>
-                    </ul>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">🏥</div>
-                    <h3 class="tool-title">Owner Communication Library</h3>
-                    <p class="tool-description">Pre-written responses to common questions. Sound professional even when you're rushing.</p>
-                    <ul class="tool-features">
-                        <li>Common question database</li>
-                        <li>Professional tone</li>
-                        <li>Fact-checked answers</li>
-                        <li>Instant deployment</li>
-                    </ul>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">🔔</div>
-                    <h3 class="tool-title">Emergency Communications</h3>
-                    <p class="tool-description">Crisis communications with clear action steps. Keep owners informed during emergencies.</p>
-                    <ul class="tool-features">
-                        <li>Crisis communication protocols</li>
-                        <li>Clear action steps</li>
-                        <li>Safety information</li>
-                        <li>Contact protocols</li>
-                    </ul>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">📋</div>
-                    <h3 class="tool-title">Governance Documentation</h3>
-                    <p class="tool-description">Official decisions and governance updates in professional format. Maintain corporate compliance.</p>
-                    <ul class="tool-features">
-                        <li>Legal compliance format</li>
-                        <li>Professional language</li>
-                        <li>Governance standards</li>
-                        <li>Archive-ready format</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="mailto:demo@reserveiq.dev" class="btn btn-primary" style="color: #1e3a8a;">🎯 Try Communication Tools Free</a>
-            </div>
+    <!-- Two Pillars Section -->
+    <section class="two-pillars" id="two-pillars">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Two Ways We Transform Your Property Management Business
+          </h2>
+          <p class="section-subtitle">
+            Handle daily stress + Prevent financial disasters. No other platform
+            does both.
+          </p>
         </div>
+
+        <div class="pillars-grid">
+          <!-- Daily Operations Pillar -->
+          <div class="pillar-card pillar-daily">
+            <div class="pillar-icon">📧</div>
+            <h3 class="pillar-title">Daily Operations</h3>
+            <p class="pillar-value">Save 5-10 Hours Every Week</p>
+            <p class="pillar-description">
+              AI-powered communication tools that make you look like a
+              professional genius. Generate board-ready content in seconds.
+            </p>
+
+            <div class="pillar-stats">
+              <div class="stats-grid">
+                <div>
+                  <div class="stat-item">12</div>
+                  <div class="stat-item-label">Professional Templates</div>
+                </div>
+                <div>
+                  <div class="stat-item">30</div>
+                  <div class="stat-item-label">Seconds to Generate</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#email-templates" class="pillar-button"
+              >See Communication Tools</a
+            >
+          </div>
+
+          <!-- Crisis Prevention Pillar -->
+          <div class="pillar-card pillar-crisis">
+            <div class="pillar-icon">🎯</div>
+            <h3 class="pillar-title">Crisis Prevention</h3>
+            <p class="pillar-value">Prevent $50,000+ Emergency Assessments</p>
+            <p class="pillar-description">
+              AI predicts reserve fund crises 2-3 years before they devastate
+              owners. No other platform offers this protection.
+            </p>
+
+            <div class="pillar-stats">
+              <div class="stats-grid">
+                <div>
+                  <div class="stat-item">2-3</div>
+                  <div class="stat-item-label">Years Early Warning</div>
+                </div>
+                <div>
+                  <div class="stat-item">92%</div>
+                  <div class="stat-item-label">Prediction Accuracy</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#crisis-prevention" class="pillar-button"
+              >See Crisis Prevention</a
+            >
+          </div>
+        </div>
+
+        <div class="combination-note">
+          <h4>Why This Combination Is Unbeatable</h4>
+          <p>
+            Communication tools get you immediate results. Crisis prevention
+            creates unbreakable client loyalty. Together, they make you
+            irreplaceable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitor Comparison Section -->
+    <section class="comparison-section" id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Why Choose ReserveIQ Over Traditional Platforms?
+          </h2>
+          <p class="section-subtitle">
+            See how we compare to Yardi, Buildium, and other property management
+            systems you already know.
+          </p>
+        </div>
+
+        <div class="comparison-disclaimer">
+          <p>
+            <em
+              >ReserveIQ is designed to complement your existing management
+              system—not replace it. Add AI-powered intelligence to Yardi,
+              Buildium, or any platform you're already using.</em
+            >
+          </p>
+        </div>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>ReserveIQ</th>
+                <th>Yardi</th>
+                <th>Buildium</th>
+                <th>Condo Control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI Communication Templates</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description"
+                    >12 Professional Templates</span
+                  >
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Manual Only</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Basic Templates</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Manual Only</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Predictive Crisis Analysis</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description"
+                    >2-3 Years Early Warning</span
+                  >
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Reactive Only</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Basic Reports</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Static Analysis</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Multi-Jurisdiction Compliance</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description">ON, BC, FL, TX</span>
+                </td>
+                <td>
+                  <span class="feature-partial">⚠️</span>
+                  <span class="feature-description">Basic Tracking</span>
+                </td>
+                <td>
+                  <span class="feature-partial">⚠️</span>
+                  <span class="feature-description">US Only</span>
+                </td>
+                <td>
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description">Canada Focus</span>
+                </td>
+              </tr>
+              <tr>
+                <td>AI Document Analysis</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description"
+                    >Instant PDF Processing</span
+                  >
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Manual Upload</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">File Storage Only</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Basic Upload</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Special Assessment Calculator</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description">AI-Powered Scenarios</span>
+                </td>
+                <td>
+                  <span class="feature-partial">⚠️</span>
+                  <span class="feature-description">Basic Calculator</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">Manual Calculations</span>
+                </td>
+                <td>
+                  <span class="feature-partial">⚠️</span>
+                  <span class="feature-description">Basic Tools</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Partner Revenue Share</td>
+                <td class="reserveiq-highlight">
+                  <span class="feature-check">✅</span>
+                  <span class="feature-description">$20-30/building/month</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">No Revenue Share</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">No Revenue Share</span>
+                </td>
+                <td>
+                  <span class="feature-cross">❌</span>
+                  <span class="feature-description">No Revenue Share</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="comparison-conclusion">
+          <h3>🏆 Only ReserveIQ Offers Complete AI-Powered Solution</h3>
+          <p>
+            Stop using 3-4 different platforms. Get everything in one
+            intelligent system that enhances your existing workflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How ReserveIQ Works</h2>
+          <p class="section-subtitle">
+            Get started in minutes. See results immediately. Build client
+            loyalty for years.
+          </p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">📄</div>
+            <h3 class="step-title">Upload Your Data</h3>
+            <p class="step-description">
+              Upload reserve studies, financial reports, or building data. Our
+              AI instantly analyzes everything and identifies potential issues.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">🧠</div>
+            <h3 class="step-title">Get AI Analysis</h3>
+            <p class="step-description">
+              Receive predictive insights, crisis warnings, and professional
+              communication templates customized to your specific building data.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">📧</div>
+            <h3 class="step-title">Share Professional Reports</h3>
+            <p class="step-description">
+              Generate board-ready emails, assessment scenarios, and compliance
+              updates in 30 seconds. Look like the expert you are.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="#" class="btn btn-primary"
+            >🚀 See It In Action - Book Demo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication Tools -->
+    <section class="simple-section white" id="email-templates">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Professional Communication Tools</h2>
+          <p class="section-subtitle">
+            AI-powered template library that makes you look like a communication
+            expert. Generate professional content in seconds.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Monthly Board Financial Update</h3>
+            <p class="feature-description">
+              Auto-filled with reserve data, variance analysis, and AI
+              recommendations. Impress your board with data-driven insights.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⚠️</div>
+            <h3 class="feature-title">Compliance Deadline Reminders</h3>
+            <p class="feature-description">
+              Jurisdiction-specific warnings with penalty calculations. Never
+              miss another deadline again.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3 class="feature-title">Special Assessment Announcements</h3>
+            <p class="feature-description">
+              Professional multi-option funding analysis that owners actually
+              understand. Reduce board meeting drama.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🏥</div>
+            <h3 class="feature-title">Owner FAQ Responses</h3>
+            <p class="feature-description">
+              Pre-written responses to common questions. Sound professional even
+              when you're rushing.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3 class="feature-title">Emergency Building Notices</h3>
+            <p class="feature-description">
+              Crisis communications with clear action steps. Keep owners
+              informed during emergencies.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3 class="feature-title">Board Resolution Notices</h3>
+            <p class="feature-description">
+              Official decisions and governance updates in professional format.
+              Maintain corporate compliance.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Value Proposition -->
-    <section class="value-prop">
-        <div class="container">
-            <div class="value-grid">
-                <div class="value-content">
-                    <h2>From Daily Stress to Strategic Success</h2>
-                    <p>Stop worrying about communications AND financial disasters. Our dual-power platform handles your immediate needs while protecting your long-term reputation. Become the property manager everyone wants to hire.</p>
-                </div>
-                
-                <div class="value-comparison">
-                    <div class="comparison-section before">
-                        <h4>Before ReserveIQ:</h4>
-                        <ul>
-                            <li>Spending hours crafting emails</li>
-                            <li>Surprised by emergency assessments</li>
-                            <li>Reactive crisis management</li>
-                            <li>Losing clients due to "unexpected" disasters</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="comparison-section after">
-                        <h4>After ReserveIQ:</h4>
-                        <ul>
-                            <li>Professional emails generated instantly</li>
-                            <li>Years advance warning for crises</li>
-                            <li>Proactive financial planning</li>
-                            <li>Hero status with boards and owners</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <section class="simple-section gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">From Daily Stress to Strategic Success</h2>
+          <p class="section-subtitle">
+            Stop worrying about communications AND financial disasters. Our
+            dual-power platform handles your immediate needs while protecting
+            your long-term reputation. Become the property manager everyone
+            wants to hire.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Crisis Prevention -->
-    <section id="crisis-prevention" class="crisis-prevention">
-        <div class="container">
-            <div class="crisis-content">
-                <h2>Predict & Prevent $50,000+ Crisis Assessments</h2>
-                <p>Our AI monitors your buildings for financial disasters 2-3 years before they hit. No other platform offers this level of protection.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">Assessment Calculator</h3>
-                        <p class="feature-description">Show boards funding options before crisis hits</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">📋</div>
-                        <h3 class="feature-title">Compliance Tracking</h3>
-                        <p class="feature-description">Never miss another regulatory deadline</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3 class="feature-title">Document Analysis</h3>
-                        <p class="feature-description">AI reads reserve studies so you don't have to</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3 class="feature-title">Financial Dashboard</h3>
-                        <p class="feature-description">Real-time building health monitoring</p>
-                    </div>
-                </div>
-            </div>
+    <section class="simple-section white" id="crisis-prevention">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Predict & Prevent $50,000+ Crisis Assessments
+          </h2>
+          <p class="section-subtitle">
+            Our AI monitors your buildings for financial disasters 2-3 years
+            before they hit. No other platform offers this level of protection.
+          </p>
         </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">Assessment Calculator</h3>
+            <p class="feature-description">
+              Show boards funding options before crisis hits
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3 class="feature-title">Compliance Tracking</h3>
+            <p class="feature-description">
+              Never miss another regulatory deadline
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3 class="feature-title">Document Analysis</h3>
+            <p class="feature-description">
+              AI reads reserve studies so you don't have to
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Financial Dashboard</h3>
+            <p class="feature-description">
+              Real-time building health monitoring
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Partner Program Model -->
-    <section id="partner-program" class="partner-program">
-        <div class="container">
-            <div class="partner-content">
-                <h2>Earn Recurring Commissions as a ReserveIQ Partner</h2>
-                <p>Join our partner program and earn ongoing revenue for every building you bring to ReserveIQ. Your clients get the best platform, you get ongoing commissions.</p>
-                
-                <div class="partner-tiers">
-                    <div class="tier-card">
-                        <div class="tier-icon">🥉</div>
-                        <h3>Bronze Partner</h3>
-                        <p>Recurring commission for each building. Perfect for independent property managers starting their partnership journey.</p>
-                    </div>
-                    
-                    <div class="tier-card featured">
-                        <div class="tier-icon">🥈</div>
-                        <h3>Silver Partner</h3>
-                        <p>Enhanced commission rates plus white-labeled client portals. Ideal for growing property management companies.</p>
-                    </div>
-                    
-                    <div class="tier-card">
-                        <div class="tier-icon">🥇</div>
-                        <h3>Gold Partner</h3>
-                        <p>Premium commission rates and dedicated support. Perfect for established firms managing multiple buildings.</p>
-                    </div>
+    <!-- Partner Program -->
+    <section class="partner-section" id="partner-program">
+      <div class="container">
+        <div class="partner-content">
+          <h2>Earn Commissions as a ReserveIQ Partner</h2>
+          <p>
+            Join our partner program and earn ongoing revenue for every building
+            you bring to ReserveIQ. Your clients get the best platform, you get
+            ongoing commissions.
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 2rem;
+              margin: 3rem 0;
+            "
+          >
+            <div
+              style="
+                background: white;
+                color: #1e3a8a;
+                border-radius: 12px;
+                padding: 2rem;
+                text-align: center;
+              "
+            >
+              <h3 style="color: #3b82f6; margin-bottom: 1rem">
+                Bronze Partner
+              </h3>
+              <div
+                style="
+                  background: #f0fdf4;
+                  padding: 1.5rem;
+                  border-radius: 8px;
+                  margin-bottom: 1rem;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #059669">
+                  $20
                 </div>
-                
-                <div class="revenue-highlight">
-                    <div class="revenue-title">Partner Success Example</div>
-                    <div class="revenue-example">
-                        Partner with 40 buildings:<br>
-                        Monthly recurring commission income<br>
-                        Annual partner revenue potential: $10,000+
-                    </div>
-                    <div class="revenue-total">Get Custom Commission Quote in Demo!</div>
+                <div style="font-size: 0.9rem; color: #64748b">
+                  Recurring commission per building/month
                 </div>
-                
-                <!-- Pricing Transparency -->
-                <div style="background: white; border-radius: 16px; padding: 2rem; margin-top: 3rem; text-align: center; border: 2px solid #3b82f6; box-shadow: 0 8px 30px rgba(59, 130, 246, 0.1);">
-                    <h3 style="color: #1e3a8a; font-size: 1.4rem; margin-bottom: 1rem;">Transparent Pricing</h3>
-                    <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 1rem;">Plans start around <strong>$250/month</strong> depending on portfolio size.</p>
-                    <p style="color: #64748b; font-size: 1rem;">Custom pricing available. No hidden fees, cancel anytime.</p>
-                </div>
-                
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="mailto:demo@reserveiq.dev" class="btn btn-primary" style="color: #1e3a8a; margin-right: 1rem;">🤝 Apply for Partnership</a>
-                </div>
+              </div>
+              <div style="color: #64748b; font-size: 0.9rem">
+                Perfect for independent property managers starting their
+                partnership journey.
+              </div>
             </div>
+
+            <div
+              style="
+                background: white;
+                color: #1e3a8a;
+                border-radius: 12px;
+                padding: 2rem;
+                text-align: center;
+              "
+            >
+              <h3 style="color: #059669; margin-bottom: 1rem">
+                Silver Partner
+              </h3>
+              <div
+                style="
+                  background: #f0fdf4;
+                  padding: 1.5rem;
+                  border-radius: 8px;
+                  margin-bottom: 1rem;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #059669">
+                  $25
+                </div>
+                <div style="font-size: 0.9rem; color: #64748b">
+                  Recurring commission per building/month
+                </div>
+              </div>
+              <div style="color: #64748b; font-size: 0.9rem">
+                Enhanced commission rates plus white-labeled client portals.
+                Ideal for growing property management companies.
+              </div>
+            </div>
+
+            <div
+              style="
+                background: white;
+                color: #1e3a8a;
+                border-radius: 12px;
+                padding: 2rem;
+                text-align: center;
+              "
+            >
+              <h3 style="color: #f59e0b; margin-bottom: 1rem">Gold Partner</h3>
+              <div
+                style="
+                  background: #f0fdf4;
+                  padding: 1.5rem;
+                  border-radius: 8px;
+                  margin-bottom: 1rem;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #059669">
+                  $30
+                </div>
+                <div style="font-size: 0.9rem; color: #64748b">
+                  Recurring commission per building/month
+                </div>
+              </div>
+              <div style="color: #64748b; font-size: 0.9rem">
+                Premium commission rates and dedicated support. Perfect for
+                established firms managing multiple buildings.
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem">
+            <a href="#" class="btn btn-primary" style="margin-right: 1rem"
+              >🤝 Apply for Partnership</a
+            >
+            <a href="#" style="color: white; text-decoration: underline"
+              >📋 Download Partner Kit</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section style="padding: 60px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">How long does onboarding take?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">Most property managers are live and generating professional communications within 7 days. Crisis prevention monitoring begins immediately.</p>
-                </div>
-                
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Do I need to change how I work?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">No, ReserveIQ integrates with your existing workflow. Continue using your current tools while gaining AI-powered communication and crisis prevention capabilities.</p>
-                </div>
-                
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">How do I earn partner commissions?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">Simply bring your buildings to ReserveIQ and earn recurring monthly commissions. No upfront costs or commitments required.</p>
-                </div>
-                
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">What if my clients want to cancel?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">No long-term contracts. Buildings can cancel with 30 days notice. We earn retention through value, not contracts.</p>
-                </div>
-                
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Do I need technical expertise?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">No technical knowledge required. Our AI handles the complexity—you get simple, actionable tools that make you look like a professional genius.</p>
-                </div>
-                
-                <div style="background: white; border-radius: 12px; padding: 2rem; border-left: 4px solid #10b981; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #1e3a8a; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Have questions?</h3>
-                    <p style="color: #475569; line-height: 1.6; margin: 0;">Email us anytime at <strong>demo@reserveiq.dev</strong> — we typically respond within 4 hours during business days.</p>
-                </div>
-            </div>
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Get answers to common questions about ReserveIQ for property
+            managers.
+          </p>
         </div>
+
+        <div class="faq-grid">
+          <div>
+            <div class="faq-item">
+              <div class="faq-question">How much does ReserveIQ cost?</div>
+              <div class="faq-answer">
+                Plans start around $250/month depending on portfolio size.
+                Custom pricing available. No hidden fees, cancel anytime.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How quickly can I start using ReserveIQ?
+              </div>
+              <div class="faq-answer">
+                Most property managers are live and generating professional
+                communications within 7 days. Crisis prevention monitoring
+                begins immediately.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Do I need to replace my current property management software?
+              </div>
+              <div class="faq-answer">
+                No, ReserveIQ integrates with your existing workflow. Continue
+                using your current tools while gaining AI-powered communication
+                and crisis prevention capabilities.
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="faq-item">
+              <div class="faq-question">How do I earn partner commissions?</div>
+              <div class="faq-answer">
+                Simply bring your buildings to ReserveIQ and earn recurring
+                monthly commissions. No upfront costs or commitments required.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">What if my clients want to cancel?</div>
+              <div class="faq-answer">
+                No long-term contracts. Buildings can cancel with 30 days
+                notice. We earn retention through value, not contracts.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Do I need technical knowledge to use ReserveIQ?
+              </div>
+              <div class="faq-answer">
+                No technical knowledge required. Our AI handles the
+                complexity—you get simple, actionable tools that make you look
+                like a professional genius.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+          "
+        >
+          <h4 style="color: #1e3a8a; margin-bottom: 1rem">
+            Still have questions?
+          </h4>
+          <p style="color: #64748b; margin-bottom: 1.5rem">
+            Email us anytime at demo@reserveiq.dev — we typically respond within
+            4 hours during business days.
+          </p>
+          <a href="#" class="btn btn-primary">📧 Contact Us</a>
+        </div>
+      </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ReserveIQ</h3>
-                    <p>AI-powered portfolio intelligence platform with dual strengths: Save 5-10 hours weekly on professional communications + Predict crises years early. Earn commissions as our partner.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="mailto:demo@reserveiq.dev">Communication Tools Demo</a></p>
-                    <p><a href="mailto:demo@reserveiq.dev">Assessment Calculator</a></p>
-                    <p><a href="mailto:demo@reserveiq.dev">Partner Commission Program</a></p>
-                    <p><a href="mailto:demo@reserveiq.dev">Support</a></p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: demo@reserveiq.dev</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Coverage Areas</h3>
-                    <p>Ontario, Canada</p>
-                    <p>British Columbia</p>
-                    <p>Alberta</p>
-                    <p>Florida, USA (Coming Soon)</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 ReserveIQ. All rights reserved. | Save Time Daily + Prevent Financial Disasters</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>ReserveIQ</h3>
+            <p>
+              AI-powered portfolio intelligence platform with dual strengths:
+              Save 5-10 hours weekly on professional communications + Predict
+              $50K+ crises 2-3 years early. Earn commissions as our partner.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="#two-pillars">Dual Power Platform</a></p>
+            <p><a href="#comparison">vs Competitors</a></p>
+            <p><a href="#partner-program">Partner Program</a></p>
+            <p><a href="#">Support</a></p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: demo@reserveiq.dev</p>
+            <p>Typically respond within 4 hours</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Coverage Areas</h3>
+            <p>Ontario, Canada</p>
+            <p>British Columbia</p>
+            <p>Alberta</p>
+            <p>Florida, USA (Coming Soon)</p>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 ReserveIQ. All rights reserved. | Save Time Daily +
+            Prevent Financial Disasters
+          </p>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script>
+      // Sticky header functionality
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 100) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
