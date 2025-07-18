@@ -719,12 +719,23 @@
       .footer-section a:hover {
         color: #10b981;
       }
-
       .footer-bottom {
         border-top: 1px solid #374151;
         padding-top: 2rem;
         text-align: center;
         color: #9ca3af;
+      }
+
+      .footer-bottom-links {
+        margin-bottom: 1rem;
+      }
+      .footer-bottom a {
+        color: #9ca3af;
+        text-decoration: none;
+        line-height: 1.6;
+      }
+      .footer-bottom a:hover {
+        color: #10b981;
       }
       .footer .legal-link {
         color: #9ca3af;
@@ -1464,14 +1475,15 @@
 
           <div style="text-align: center; margin-top: 2rem">
             <a
-              href="https://reserveiq-platform-gateway.vercel.app/signup?partner=true"
+              href="https://reserveiq-platform.vercel.app/auth"
               target="_blank"
               class="btn btn-primary"
               style="margin-right: 1rem"
               >🤝 Apply for Partnership</a
             >
             <a
-              href="mailto:info@reserveiq.net"
+              href="https://reserveiq-platform.vercel.app/partnership"
+              target="_blank"
               style="color: white; text-decoration: underline"
               >📋 Download Partner Kit</a
             >
@@ -1596,14 +1608,22 @@
           <div class="footer-section">
             <h3>Quick Links</h3>
             <p>
-              <a href="https://reserveiq-platform.vercel.app/about-us"
+              <a
+                target="_blank"
+                href="https://reserveiq-platform.vercel.app/about-us"
                 >About ReserveIQ</a
               >
             </p>
-            <p><a href="mailto:support@reserveiq.dev">Support</a></p>
-            <p><a href="#partner-program">Partner Program</a></p>
             <p>
-              <a href="https://www.reserveiq.net">Back to Marketing Site</a>
+              <a target="_blank" href="mailto:support@reserveiq.dev">Support</a>
+            </p>
+            <p>
+              <a href="#partner-program">Partner Program</a>
+            </p>
+            <p>
+              <a target="_blank" href="https://www.reserveiq.net"
+                >Back to Marketing Site</a
+              >
             </p>
           </div>
 
@@ -1623,10 +1643,20 @@
         </div>
 
         <div class="footer-bottom">
-          <p>
-            &copy; 2025 ReserveIQ. All rights reserved. | Save Time Daily +
-            Prevent Financial Disasters
+          <p class="footer-bottom-links">
+            <a
+              target="_blank"
+              href="https://reserveiq-platform.vercel.app/about-us"
+              >About ReserveIQ
+            </a>
+            |
+            <a target="_blank" href="mailto:support@reserveiq.dev">Support</a> |
+            <a href="#partner-program">Partner Program</a> |
+            <a target="_blank" href="https://www.reserveiq.net"
+              >← Back to Marketing Site</a
+            >
           </p>
+          <p>&copy; 2025 ReserveIQ. All rights reserved.</p>
           <p>
             By using this site, you agree to our
             <a
